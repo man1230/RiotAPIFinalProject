@@ -26,8 +26,6 @@ namespace RiotAPIFinalProject.ViewModels
 
         public BindingList<MatchInfo> CurrentMatchInfo { get; set; }
 
-        public BindingList<MatchMeta> CurrentMatchMeta { get; set; }
-
         public RiotApi RiotInfo
         {
             get => _riotAPI;

@@ -10,16 +10,18 @@ namespace RiotAPIFinalProject
 {
     public class MatchInfo
     {
-        
 
         public string GameName { get; set; }
 
         public string GameMode { get; set; }
 
-        public MatchInfo(string gameName = null, string gameMode = null)
+        public MatchMeta Meta { get; set; }
+
+        public MatchInfo(string gameName = null, string gameMode = null, MatchMeta meta = null)
         {
             GameName = gameName;
             GameMode = gameMode;
+            Meta = meta;
         }
     }
 }

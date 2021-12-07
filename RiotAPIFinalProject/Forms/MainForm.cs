@@ -91,7 +91,7 @@ namespace RiotAPIFinalProject
                 {
                     if (entry.Key == "info")
                     {
-                        _currentMatchInfo = JsonConvert.DeserializeObject<MatchInfo>(entry.Value.ToString());
+                        _currentMatchInfo = (dynamic)JsonConvert.DeserializeObject<MatchInfo>(entry.Value.ToString());
 
                     }
                     if (entry.Key == "metadata")
@@ -106,14 +106,14 @@ namespace RiotAPIFinalProject
                 //    _currentMatchParticipants.Add((Summoner)_currentMatchInfo.Participant.ParticipantId);
                 //}
 
-                ViewModel.CurrentMatchInfo.Add(new MatchInfo(_currentMatchInfo.GameName, _currentMatchInfo.GameMode));
-                ViewModel.CurrentMatchMeta.Add(new MatchMeta(matchID, _currentMatchMeta.Participants));
+                //ViewModel.CurrentMatchMeta.Add();
+                ViewModel.CurrentMatchInfo.Add(new MatchInfo(_currentMatchInfo.GameName, _currentMatchInfo.GameMode, new MatchMeta(matchID, _currentMatchMeta.Participants)));
             }
 
         }
 
         private RiotAPIViewModel _viewModel;
-        private MatchInfo _currentMatchInfo;
+        private dynamic _currentMatchInfo;
         private dynamic _currentMatchMeta;
 
     }

@@ -400,6 +400,7 @@ namespace RiotAPIFinalProject
             // 
             // listBox1
             // 
+            this.listBox1.DisplayMember = "_AdditionalProperties";
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(129, 20);
             this.listBox1.Name = "listBox1";
