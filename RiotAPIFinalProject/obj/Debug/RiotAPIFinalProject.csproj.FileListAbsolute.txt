@@ -1,0 +1,15 @@
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\RiotAPIFinalProject.exe.config
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\RiotAPIFinalProject.exe
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\RiotAPIFinalProject.pdb
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\Camille.dll
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\Newtonsoft.Json.dll
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\bin\Debug\Newtonsoft.Json.xml
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.Properties.Resources.resources
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.GenerateResource.cache
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.CoreCompileInputs.cache
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.CopyComplete
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.exe
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.pdb
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.MainForm.resources
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.Fody.CopyLocal.cache
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.AssemblyReference.cache
