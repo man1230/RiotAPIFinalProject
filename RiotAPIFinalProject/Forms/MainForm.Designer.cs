@@ -31,7 +31,6 @@ namespace RiotAPIFinalProject
         {
             this.components = new System.ComponentModel.Container();
             this.summonerSearchTextBox = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.searchSummonerNameLabel = new System.Windows.Forms.Label();
             this.summonerInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.summonerLevelTextBox = new System.Windows.Forms.TextBox();
@@ -59,29 +58,26 @@ namespace RiotAPIFinalProject
             this.championPointsLabel = new System.Windows.Forms.Label();
             this.championLevelTextBox = new System.Windows.Forms.TextBox();
             this.championLevelLabel = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.championMasteriesTab = new System.Windows.Forms.TabPage();
-            this.matchesTab = new System.Windows.Forms.TabPage();
             this.matchInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.currentMatchInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.currentMatchInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.matchesListBox = new System.Windows.Forms.ListBox();
             this.lastTenMatchesLabel = new System.Windows.Forms.Label();
             this.riotAPIKeyLabel = new System.Windows.Forms.Label();
             this.riotAPIKeyTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.championMasteryGroupBox = new System.Windows.Forms.GroupBox();
+            this.matchesGroupBox = new System.Windows.Forms.GroupBox();
             this.summonerInfoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.riotAPIViewModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.championsBindingSource)).BeginInit();
             this.accountInfoGroupBox.SuspendLayout();
             this.masteryStatsGroupBox.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.championMasteriesTab.SuspendLayout();
-            this.matchesTab.SuspendLayout();
             this.matchInfoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentMatchInfoBindingSource)).BeginInit();
+            this.championMasteryGroupBox.SuspendLayout();
+            this.matchesGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // summonerSearchTextBox
@@ -224,7 +220,7 @@ namespace RiotAPIFinalProject
             // championsLabel
             // 
             this.championsLabel.AutoSize = true;
-            this.championsLabel.Location = new System.Drawing.Point(6, 3);
+            this.championsLabel.Location = new System.Drawing.Point(8, 16);
             this.championsLabel.Name = "championsLabel";
             this.championsLabel.Size = new System.Drawing.Size(59, 13);
             this.championsLabel.TabIndex = 0;
@@ -235,9 +231,9 @@ namespace RiotAPIFinalProject
             this.championMasteriesListBox.DataSource = this.championsBindingSource;
             this.championMasteriesListBox.DisplayMember = "ChampName";
             this.championMasteriesListBox.FormattingEnabled = true;
-            this.championMasteriesListBox.Location = new System.Drawing.Point(9, 20);
+            this.championMasteriesListBox.Location = new System.Drawing.Point(11, 33);
             this.championMasteriesListBox.Name = "championMasteriesListBox";
-            this.championMasteriesListBox.Size = new System.Drawing.Size(100, 225);
+            this.championMasteriesListBox.Size = new System.Drawing.Size(100, 121);
             this.championMasteriesListBox.TabIndex = 1;
             this.championMasteriesListBox.ValueMember = "_AdditionalProperties";
             // 
@@ -253,9 +249,9 @@ namespace RiotAPIFinalProject
             this.masteryStatsGroupBox.Controls.Add(this.championPointsLabel);
             this.masteryStatsGroupBox.Controls.Add(this.championLevelTextBox);
             this.masteryStatsGroupBox.Controls.Add(this.championLevelLabel);
-            this.masteryStatsGroupBox.Location = new System.Drawing.Point(115, 6);
+            this.masteryStatsGroupBox.Location = new System.Drawing.Point(117, 19);
             this.masteryStatsGroupBox.Name = "masteryStatsGroupBox";
-            this.masteryStatsGroupBox.Size = new System.Drawing.Size(405, 239);
+            this.masteryStatsGroupBox.Size = new System.Drawing.Size(405, 138);
             this.masteryStatsGroupBox.TabIndex = 2;
             this.masteryStatsGroupBox.TabStop = false;
             this.masteryStatsGroupBox.Text = "Mastery Stats";
@@ -263,7 +259,7 @@ namespace RiotAPIFinalProject
             // tokensEarnedTextBox
             // 
             this.tokensEarnedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.championsBindingSource, "TokensEarned", true));
-            this.tokensEarnedTextBox.Location = new System.Drawing.Point(143, 72);
+            this.tokensEarnedTextBox.Location = new System.Drawing.Point(148, 88);
             this.tokensEarnedTextBox.Name = "tokensEarnedTextBox";
             this.tokensEarnedTextBox.ReadOnly = true;
             this.tokensEarnedTextBox.Size = new System.Drawing.Size(100, 20);
@@ -272,7 +268,7 @@ namespace RiotAPIFinalProject
             // tokensEarnedLabel
             // 
             this.tokensEarnedLabel.AutoSize = true;
-            this.tokensEarnedLabel.Location = new System.Drawing.Point(140, 56);
+            this.tokensEarnedLabel.Location = new System.Drawing.Point(145, 72);
             this.tokensEarnedLabel.Name = "tokensEarnedLabel";
             this.tokensEarnedLabel.Size = new System.Drawing.Size(80, 13);
             this.tokensEarnedLabel.TabIndex = 8;
@@ -281,7 +277,7 @@ namespace RiotAPIFinalProject
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.championsBindingSource, "ChestGranted", true));
-            this.textBox1.Location = new System.Drawing.Point(143, 33);
+            this.textBox1.Location = new System.Drawing.Point(9, 89);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -290,7 +286,7 @@ namespace RiotAPIFinalProject
             // chestGrantedLabel
             // 
             this.chestGrantedLabel.AutoSize = true;
-            this.chestGrantedLabel.Location = new System.Drawing.Point(140, 16);
+            this.chestGrantedLabel.Location = new System.Drawing.Point(6, 72);
             this.chestGrantedLabel.Name = "chestGrantedLabel";
             this.chestGrantedLabel.Size = new System.Drawing.Size(133, 13);
             this.chestGrantedLabel.TabIndex = 6;
@@ -299,7 +295,7 @@ namespace RiotAPIFinalProject
             // pointsToLevelTextBox
             // 
             this.pointsToLevelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.championsBindingSource, "PointsToNextLevel", true));
-            this.pointsToLevelTextBox.Location = new System.Drawing.Point(9, 113);
+            this.pointsToLevelTextBox.Location = new System.Drawing.Point(283, 33);
             this.pointsToLevelTextBox.Name = "pointsToLevelTextBox";
             this.pointsToLevelTextBox.ReadOnly = true;
             this.pointsToLevelTextBox.Size = new System.Drawing.Size(100, 20);
@@ -308,7 +304,7 @@ namespace RiotAPIFinalProject
             // pointsToLevelLabel
             // 
             this.pointsToLevelLabel.AutoSize = true;
-            this.pointsToLevelLabel.Location = new System.Drawing.Point(6, 96);
+            this.pointsToLevelLabel.Location = new System.Drawing.Point(280, 16);
             this.pointsToLevelLabel.Name = "pointsToLevelLabel";
             this.pointsToLevelLabel.Size = new System.Drawing.Size(102, 13);
             this.pointsToLevelLabel.TabIndex = 4;
@@ -317,7 +313,7 @@ namespace RiotAPIFinalProject
             // championPointsTextBox
             // 
             this.championPointsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.championsBindingSource, "ChampPoints", true));
-            this.championPointsTextBox.Location = new System.Drawing.Point(9, 73);
+            this.championPointsTextBox.Location = new System.Drawing.Point(148, 33);
             this.championPointsTextBox.Name = "championPointsTextBox";
             this.championPointsTextBox.ReadOnly = true;
             this.championPointsTextBox.Size = new System.Drawing.Size(77, 20);
@@ -326,7 +322,7 @@ namespace RiotAPIFinalProject
             // championPointsLabel
             // 
             this.championPointsLabel.AutoSize = true;
-            this.championPointsLabel.Location = new System.Drawing.Point(6, 56);
+            this.championPointsLabel.Location = new System.Drawing.Point(145, 16);
             this.championPointsLabel.Name = "championPointsLabel";
             this.championPointsLabel.Size = new System.Drawing.Size(83, 13);
             this.championPointsLabel.TabIndex = 2;
@@ -350,50 +346,14 @@ namespace RiotAPIFinalProject
             this.championLevelLabel.TabIndex = 0;
             this.championLevelLabel.Text = "Champion Level";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.championMasteriesTab);
-            this.tabControl1.Controls.Add(this.matchesTab);
-            this.tabControl1.Location = new System.Drawing.Point(12, 200);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(534, 277);
-            this.tabControl1.TabIndex = 7;
-            // 
-            // championMasteriesTab
-            // 
-            this.championMasteriesTab.Controls.Add(this.masteryStatsGroupBox);
-            this.championMasteriesTab.Controls.Add(this.championsLabel);
-            this.championMasteriesTab.Controls.Add(this.championMasteriesListBox);
-            this.championMasteriesTab.Location = new System.Drawing.Point(4, 22);
-            this.championMasteriesTab.Name = "championMasteriesTab";
-            this.championMasteriesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.championMasteriesTab.Size = new System.Drawing.Size(526, 251);
-            this.championMasteriesTab.TabIndex = 0;
-            this.championMasteriesTab.Text = "Champion Materies";
-            this.championMasteriesTab.UseVisualStyleBackColor = true;
-            // 
-            // matchesTab
-            // 
-            this.matchesTab.Controls.Add(this.matchInfoGroupBox);
-            this.matchesTab.Controls.Add(this.matchesListBox);
-            this.matchesTab.Controls.Add(this.lastTenMatchesLabel);
-            this.matchesTab.Location = new System.Drawing.Point(4, 22);
-            this.matchesTab.Name = "matchesTab";
-            this.matchesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.matchesTab.Size = new System.Drawing.Size(526, 251);
-            this.matchesTab.TabIndex = 1;
-            this.matchesTab.Text = "Matches";
-            this.matchesTab.UseVisualStyleBackColor = true;
-            // 
             // matchInfoGroupBox
             // 
             this.matchInfoGroupBox.Controls.Add(this.listBox1);
             this.matchInfoGroupBox.Controls.Add(this.textBox3);
             this.matchInfoGroupBox.Controls.Add(this.textBox2);
-            this.matchInfoGroupBox.Location = new System.Drawing.Point(124, 7);
+            this.matchInfoGroupBox.Location = new System.Drawing.Point(127, 19);
             this.matchInfoGroupBox.Name = "matchInfoGroupBox";
-            this.matchInfoGroupBox.Size = new System.Drawing.Size(396, 238);
+            this.matchInfoGroupBox.Size = new System.Drawing.Size(422, 325);
             this.matchInfoGroupBox.TabIndex = 2;
             this.matchInfoGroupBox.TabStop = false;
             this.matchInfoGroupBox.Text = "Match Info";
@@ -402,16 +362,11 @@ namespace RiotAPIFinalProject
             // 
             this.listBox1.DisplayMember = "_AdditionalProperties";
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(129, 20);
+            this.listBox1.Location = new System.Drawing.Point(274, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(142, 199);
             this.listBox1.TabIndex = 2;
             this.listBox1.ValueMember = "_AdditionalProperties";
-            // 
-            // currentMatchInfoBindingSource
-            // 
-            this.currentMatchInfoBindingSource.DataMember = "CurrentMatchInfo";
-            this.currentMatchInfoBindingSource.DataSource = this.riotAPIViewModelBindingSource;
             // 
             // textBox3
             // 
@@ -420,6 +375,11 @@ namespace RiotAPIFinalProject
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 1;
+            // 
+            // currentMatchInfoBindingSource
+            // 
+            this.currentMatchInfoBindingSource.DataMember = "CurrentMatchInfo";
+            this.currentMatchInfoBindingSource.DataSource = this.riotAPIViewModelBindingSource;
             // 
             // textBox2
             // 
@@ -434,16 +394,16 @@ namespace RiotAPIFinalProject
             this.matchesListBox.DataSource = this.currentMatchInfoBindingSource;
             this.matchesListBox.DisplayMember = "MatchID";
             this.matchesListBox.FormattingEnabled = true;
-            this.matchesListBox.Location = new System.Drawing.Point(6, 19);
+            this.matchesListBox.Location = new System.Drawing.Point(9, 31);
             this.matchesListBox.Name = "matchesListBox";
-            this.matchesListBox.Size = new System.Drawing.Size(111, 225);
+            this.matchesListBox.Size = new System.Drawing.Size(111, 303);
             this.matchesListBox.TabIndex = 1;
             this.matchesListBox.ValueMember = "GameMode";
             // 
             // lastTenMatchesLabel
             // 
             this.lastTenMatchesLabel.AutoSize = true;
-            this.lastTenMatchesLabel.Location = new System.Drawing.Point(3, 3);
+            this.lastTenMatchesLabel.Location = new System.Drawing.Point(6, 15);
             this.lastTenMatchesLabel.Name = "lastTenMatchesLabel";
             this.lastTenMatchesLabel.Size = new System.Drawing.Size(86, 13);
             this.lastTenMatchesLabel.TabIndex = 0;
@@ -466,14 +426,39 @@ namespace RiotAPIFinalProject
             this.riotAPIKeyTextBox.TabIndex = 1;
             this.riotAPIKeyTextBox.TextChanged += new System.EventHandler(this.riotAPIKeyTextBox_TextChanged);
             // 
+            // championMasteryGroupBox
+            // 
+            this.championMasteryGroupBox.Controls.Add(this.championsLabel);
+            this.championMasteryGroupBox.Controls.Add(this.championMasteriesListBox);
+            this.championMasteryGroupBox.Controls.Add(this.masteryStatsGroupBox);
+            this.championMasteryGroupBox.Location = new System.Drawing.Point(12, 200);
+            this.championMasteryGroupBox.Name = "championMasteryGroupBox";
+            this.championMasteryGroupBox.Size = new System.Drawing.Size(534, 163);
+            this.championMasteryGroupBox.TabIndex = 7;
+            this.championMasteryGroupBox.TabStop = false;
+            this.championMasteryGroupBox.Text = "Champion Masteries";
+            // 
+            // matchesGroupBox
+            // 
+            this.matchesGroupBox.Controls.Add(this.lastTenMatchesLabel);
+            this.matchesGroupBox.Controls.Add(this.matchesListBox);
+            this.matchesGroupBox.Controls.Add(this.matchInfoGroupBox);
+            this.matchesGroupBox.Location = new System.Drawing.Point(553, 13);
+            this.matchesGroupBox.Name = "matchesGroupBox";
+            this.matchesGroupBox.Size = new System.Drawing.Size(555, 350);
+            this.matchesGroupBox.TabIndex = 8;
+            this.matchesGroupBox.TabStop = false;
+            this.matchesGroupBox.Text = "Matches";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 483);
+            this.ClientSize = new System.Drawing.Size(1116, 368);
+            this.Controls.Add(this.matchesGroupBox);
+            this.Controls.Add(this.championMasteryGroupBox);
             this.Controls.Add(this.riotAPIKeyTextBox);
             this.Controls.Add(this.riotAPIKeyLabel);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.accountInfoGroupBox);
             this.Controls.Add(this.summonerSearchButton);
             this.Controls.Add(this.summonerInfoGroupBox);
@@ -485,7 +470,6 @@ namespace RiotAPIFinalProject
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoL Summoner Search";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.summonerInfoGroupBox.ResumeLayout(false);
             this.summonerInfoGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.riotAPIViewModelBindingSource)).EndInit();
@@ -494,14 +478,13 @@ namespace RiotAPIFinalProject
             this.accountInfoGroupBox.PerformLayout();
             this.masteryStatsGroupBox.ResumeLayout(false);
             this.masteryStatsGroupBox.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.championMasteriesTab.ResumeLayout(false);
-            this.championMasteriesTab.PerformLayout();
-            this.matchesTab.ResumeLayout(false);
-            this.matchesTab.PerformLayout();
             this.matchInfoGroupBox.ResumeLayout(false);
             this.matchInfoGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentMatchInfoBindingSource)).EndInit();
+            this.championMasteryGroupBox.ResumeLayout(false);
+            this.championMasteryGroupBox.PerformLayout();
+            this.matchesGroupBox.ResumeLayout(false);
+            this.matchesGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,7 +492,6 @@ namespace RiotAPIFinalProject
 
         #endregion
         private System.Windows.Forms.TextBox summonerSearchTextBox;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label searchSummonerNameLabel;
         private System.Windows.Forms.GroupBox summonerInfoGroupBox;
         private System.Windows.Forms.TextBox puuIDTextBox;
@@ -537,9 +519,6 @@ namespace RiotAPIFinalProject
         private System.Windows.Forms.Label tokensEarnedLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label chestGrantedLabel;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage championMasteriesTab;
-        private System.Windows.Forms.TabPage matchesTab;
         private System.Windows.Forms.Label lastTenMatchesLabel;
         private System.Windows.Forms.GroupBox matchInfoGroupBox;
         private System.Windows.Forms.ListBox matchesListBox;
@@ -549,6 +528,8 @@ namespace RiotAPIFinalProject
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox championMasteryGroupBox;
+        private System.Windows.Forms.GroupBox matchesGroupBox;
     }
 }
 

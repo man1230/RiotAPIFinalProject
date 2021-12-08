@@ -15,13 +15,13 @@ namespace RiotAPIFinalProject
 
         public string GameMode { get; set; }
 
-        public MatchMeta Meta { get; set; }
+        public List<Participant> Participants { get; set; }
 
-        public MatchInfo(string gameName = null, string gameMode = null, MatchMeta meta = null)
+        public MatchInfo(string gameName = null, string gameMode = null, List<Participant> participants = null)
         {
             GameName = gameName;
             GameMode = gameMode;
-            Meta = meta;
+            Participants = participants;
         }
     }
 }

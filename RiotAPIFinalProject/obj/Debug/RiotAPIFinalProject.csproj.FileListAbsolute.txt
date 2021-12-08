@@ -12,3 +12,4 @@ D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\
 D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.pdb
 D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.MainForm.resources
 D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.Fody.CopyLocal.cache
+D:\SchoolWork\DIG4778\RiotAPI\RiotAPIFinalProject\RiotAPIFinalProject\obj\Debug\RiotAPIFinalProject.csproj.AssemblyReference.cache
