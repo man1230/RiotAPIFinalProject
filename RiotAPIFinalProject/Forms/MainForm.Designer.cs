@@ -552,7 +552,8 @@ namespace RiotAPIFinalProject
             // participantsListBox
             // 
             this.participantsListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.participantsBindingSource, "ParticipantId", true));
-            this.participantsListBox.DisplayMember = "_AdditionalProperties";
+            this.participantsListBox.DataSource = this.participantsBindingSource;
+            this.participantsListBox.DisplayMember = "ParticipantId";
             this.participantsListBox.FormattingEnabled = true;
             this.participantsListBox.Location = new System.Drawing.Point(6, 32);
             this.participantsListBox.Name = "participantsListBox";
