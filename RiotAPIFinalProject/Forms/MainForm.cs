@@ -1,15 +1,10 @@
 ﻿using MingweiSamuel.Camille;
 using MingweiSamuel.Camille.Enums;
 using MingweiSamuel.Camille.MatchV5;
-using MingweiSamuel.Camille.SummonerV4;
 using RiotAPIFinalProject.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -59,7 +54,7 @@ namespace RiotAPIFinalProject
 
         private void GetSummonerInfo()
         {
-            ViewModel.RiotInfo = RiotApi.NewInstance(APIKey);     //Current Key: RGAPI-7c172334-8358-458b-b1a8-3fabd65cd958
+            ViewModel.RiotInfo = RiotApi.NewInstance(APIKey);     //Current Key: RGAPI-66d28639-59a4-48b1-bc69-b50abb966fec
             ViewModel.Summoner = ViewModel.RiotInfo.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, searchInput);
 
             GetMasteryInfo();
@@ -92,36 +87,15 @@ namespace RiotAPIFinalProject
                     if (entry.Key == "info")
                     {
                         _currentMatchInfo = (dynamic)JsonConvert.DeserializeObject<MatchInfo>(entry.Value.ToString());
-
                     }
-                    //if (entry.Key == "metadata")
-                    //{
-                    //    _currentMatchMeta = (dynamic)JsonConvert.DeserializeObject<MatchMeta>(entry.Value.ToString());
-                    //}
                 }
 
-                //_currentMatchParticipants = new List<Summoner>();
-                //foreach (string participant in _currentMatchMeta.Participants)
-                //{
-                //    _currentMatchParticipants.Add(ViewModel.RiotInfo.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, participant));
-                //}
-
-                //_currentMatchParticipants = new List<Summoner>();
-                //foreach (var participant in _currentMatchInfo.Participants)
-                //{
-                //    _currentMatchParticipants.Add((Summoner)_currentMatchInfo.Participant.ParticipantId);
-                //}
-
-                //ViewModel.CurrentMatchMeta.Add();
                 ViewModel.CurrentMatchInfo.Add(new MatchInfo(_currentMatchInfo.GameName, _currentMatchInfo.GameMode, _currentMatchInfo.Participants));
-                //ViewModel.CurrentMatchMeta.Add(new MatchMeta(matchID, _currentMatchMeta.Participants, _currentMatchParticipants));
             }
 
         }
 
         private RiotAPIViewModel _viewModel;
         private dynamic _currentMatchInfo;
-        //private dynamic _currentMatchMeta;
-        //private List<Summoner> _currentMatchParticipants;
     }
 }

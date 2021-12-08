@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using MingweiSamuel.Camille;
 using MingweiSamuel.Camille.ChampionMasteryV4;
-using MingweiSamuel.Camille.Enums;
 using MingweiSamuel.Camille.MatchV5;
 using MingweiSamuel.Camille.SummonerV4;
 
